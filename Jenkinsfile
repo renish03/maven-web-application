@@ -56,7 +56,7 @@ node {
     currentBuild.result = "FAILED"
   }
   finally{
-    sendSlackNotifications(currentBuild.result)
+    notifyBuild(currentBuild.result)
   }
 
 }
