@@ -1,6 +1,6 @@
 def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
-  buildStatus =  buildStatus ?: 'SUCCESS'
+  buildStatus =  buildStatus ?: 'SUCCESSFUL'
 
   // Default values
   def colorName = 'RED'
@@ -12,7 +12,7 @@ def notifyBuild(String buildStatus = 'STARTED') {
   if (buildStatus == 'STARTED') {
     color = 'YELLOW'
     colorCode = '#FFFF00'
-  } else if (buildStatus == 'SUCCESS') {
+  } else if (buildStatus == 'SUCCESSFUL') {
     color = 'GREEN'
     colorCode = '#00FF00'
   } else {
